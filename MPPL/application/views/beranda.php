@@ -113,43 +113,43 @@
 				
 		<table class="table">
 		<thead>
-			<tr>
-			<td> <a href="klasifikasi.html"><img src="<?php echo base_url() ?>img/pc.png" class="img-rounded"></a> </td>
-			<td> <a href="klasifikasi.html"><img src="<?php echo base_url() ?>img/factory.png" class="img-rounded"></a> </td>
-			<td> <a href="klasifikasi.html"><img src="<?php echo base_url() ?>img/science.png" class="img-rounded"></a> </td>		
-			<td> <a href="klasifikasi.html"><img src="<?php echo base_url() ?>img/sipil.png" class="img-rounded"></a> </td>
+		<tr>
+			<td> <a href="<?php echo base_url();?>/index.php/search/klasifikasi/<?php echo $User[0]->NRP?>/kom"><img src="<?php echo base_url() ?>img/pc.png" class="img-rounded"></a> </td>
+			<td> <a href="<?php echo base_url();?>/index.php/search/klasifikasi/<?php echo $User[0]->NRP?>/ind"><img src="<?php echo base_url() ?>img/factory.png" class="img-rounded"></a> </td>
+			<td> <a href="<?php echo base_url();?>/index.php/search/klasifikasi/<?php echo $User[0]->NRP?>/sci"><img src="<?php echo base_url() ?>img/science.png" class="img-rounded"></a> </td>		
+			<td> <a href="<?php echo base_url();?>/index.php/search/klasifikasi/<?php echo $User[0]->NRP?>/sip"><img src="<?php echo base_url() ?>img/sipil.png" class="img-rounded"></a> </td>
 			</tr>
 		</thead>
 		<tbody>
 			<tr>
-			<td> <a href="klasifikasi.html" class="text-info"> Komputer </td>
-			<td> <a href="klasifikasi.html" class="text-info"> Industri </td>
-			<td> <a href="klasifikasi.html" class="text-info"> Science </td>
-			<td> <a href="klasifikasi.html" class="text-info"> Sipil </td>
+			<td> <a href="<?php echo base_url();?>/index.php/search/klasifikasi/<?php echo $User[0]->NRP?>/kom" class="text-info"> Komputer </td>
+			<td> <a href="<?php echo base_url();?>/index.php/search/klasifikasi/<?php echo $User[0]->NRP?>/ind" class="text-info"> Industri </td>
+			<td> <a href="<?php echo base_url();?>/index.php/search/klasifikasi/<?php echo $User[0]->NRP?>/sci" class="text-info"> Science </td>
+			<td> <a href="<?php echo base_url();?>/index.php/search/klasifikasi/<?php echo $User[0]->NRP?>/sip" class="text-info"> Sipil </td>
 			</tr>
 			<tr>
-			<td> <a href="klasifikasi.html"><img src="<?php echo base_url() ?>img/ship.png" class="img-rounded"></a> </td>
-			<td> <a href="klasifikasi.html"><img src="<?php echo base_url() ?>img/seni.png" class="img-rounded"></a> </td>
-			<td> <a href="klasifikasi.html"><img src="<?php echo base_url() ?>img/football.png" class="img-rounded"></a> </td>		
-			<td> <a href="klasifikasi.html"><img src="<?php echo base_url() ?>img/historical.png" class="img-rounded"></a> </td>
+			<td> <a href="<?php echo base_url();?>/index.php/search/klasifikasi/<?php echo $User[0]->NRP?>/kel"><img src="<?php echo base_url() ?>img/ship.png" class="img-rounded"></a> </td>
+			<td> <a href="<?php echo base_url();?>/index.php/search/klasifikasi/<?php echo $User[0]->NRP?>/sen"><img src="<?php echo base_url() ?>img/seni.png" class="img-rounded"></a> </td>
+			<td> <a href="<?php echo base_url();?>/index.php/search/klasifikasi/<?php echo $User[0]->NRP?>/olr"><img src="<?php echo base_url() ?>img/football.png" class="img-rounded"></a> </td>		
+			<td> <a href="<?php echo base_url();?>/index.php/search/klasifikasi/<?php echo $User[0]->NRP?>/sej"><img src="<?php echo base_url() ?>img/historical.png" class="img-rounded"></a> </td>
 			</tr>
 			<tr>
-			<td> <a href="klasifikasi.html" class="text-info"> Kelautan </td>
-			<td> <a href="klasifikasi.html" class="text-info"> Seni </td>
-			<td> <a href="klasifikasi.html" class="text-info"> Olahraga </td>
-			<td> <a href="klasifikasi.html" class="text-info"> Sejarah </td>
+			<td> <a href="<?php echo base_url();?>/index.php/search/klasifikasi/<?php echo $User[0]->NRP?>/kel" class="text-info"> Kelautan </td>
+			<td> <a href="<?php echo base_url();?>/index.php/search/klasifikasi/<?php echo $User[0]->NRP?>/sen" class="text-info"> Seni </td>
+			<td> <a href="<?php echo base_url();?>/index.php/search/klasifikasi/<?php echo $User[0]->NRP?>/olr" class="text-info"> Olahraga </td>
+			<td> <a href="<?php echo base_url();?>/index.php/search/klasifikasi/<?php echo $User[0]->NRP?>/sej" class="text-info"> Sejarah </td>
 			</tr>
 			<tr>
-			<td> <a href="klasifikasi.html"><img src="<?php echo base_url() ?>img/bisnis.png" class="img-rounded"></a> </td>
-			<td> <a href="klasifikasi.html"><img src="<?php echo base_url() ?>img/biografi.png" class="img-rounded"></a> </td>
-			<td> <a href="klasifikasi.html"><img src="<?php echo base_url() ?>img/komik.png" class="img-rounded"></a> </td>		
-			<td> <a href="klasifikasi.html"><img src="<?php echo base_url() ?>img/other.png" class="img-rounded"></a> </td>
+			<td> <a href="<?php echo base_url();?>/index.php/search/klasifikasi/<?php echo $User[0]->NRP?>/bis"><img src="<?php echo base_url() ?>img/bisnis.png" class="img-rounded"></a> </td>
+			<td> <a href="<?php echo base_url();?>/index.php/search/klasifikasi/<?php echo $User[0]->NRP?>/bio"><img src="<?php echo base_url() ?>img/biografi.png" class="img-rounded"></a> </td>
+			<td> <a href="<?php echo base_url();?>/index.php/search/klasifikasi/<?php echo $User[0]->NRP?>/hib"><img src="<?php echo base_url() ?>img/komik.png" class="img-rounded"></a> </td>		
+			<td> <a href="<?php echo base_url();?>/index.php/search/klasifikasi/<?php echo $User[0]->NRP?>/lai"><img src="<?php echo base_url() ?>img/other.png" class="img-rounded"></a> </td>
 			</tr>
 			<tr>
-			<td> <a href="klasifikasi.html" class="text-info"> Bisnis </td>
-			<td> <a href="klasifikasi.html" class="text-info"> Biografi </td>
-			<td> <a href="klasifikasi.html" class="text-info"> Hiburan </td>
-			<td> <a href="klasifikasi.html" class="text-info"> Lain-lain </td>
+			<td> <a href="<?php echo base_url();?>/index.php/search/klasifikasi/<?php echo $User[0]->NRP?>/bis" class="text-info"> Bisnis </td>
+			<td> <a href="<?php echo base_url();?>/index.php/search/klasifikasi/<?php echo $User[0]->NRP?>/bio" class="text-info"> Biografi </td>
+			<td> <a href="<?php echo base_url();?>/index.php/search/klasifikasi/<?php echo $User[0]->NRP?>/hib" class="text-info"> Hiburan </td>
+			<td> <a href="<?php echo base_url();?>/index.php/search/klasifikasi/<?php echo $User[0]->NRP?>/lai" class="text-info"> Lain-lain </td>
 			</tr>
 			<tr>
 			<td></td><td></td><td></td><td></td>
