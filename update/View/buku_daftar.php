@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -15,18 +14,24 @@
         padding-top: 60px;
         padding-bottom: 40px;
       }
-	  
-	  .container{
-		max-width: 1000px;
-	  }
-
-    img{
-      width: 100px;
-      height: 100px;
+    
+    .container{
+    max-width: 1000px;
     }
-	  
+        
     </style>
     <link href="<?php echo base_url(); ?>css/bootstrap-responsive.css" rel="stylesheet">
+    <?php 
+      $data['ID_Buku'] = "";
+      $data['NRP'] = "";
+      $data['Nama_Buku'] = "";
+      $data['Deskripsi'] = "";
+      $data['Kategori'] = "";
+      $data['Penulis'] = "";
+      $data['Status'] = "";
+      $data['JReservasi'] = "";
+      $num = 1;
+    ?>
     <?php 
       $data['NRP'] = $Other[0]->NRP;
       $data['NamaUser'] = $Other[0]->NamaUser;
@@ -36,12 +41,11 @@
                   $data['Deskripsi'] = $row->Deskripsi;
                   $data['Kategori'] = $row->Kategori;
                   $data['Penulis'] = $row->Penulis;
-                  $data['Penerbit'] = $row->Penerbit;
-                  $data['Tahun'] = $row->Tahun;
                   $data['Status'] = $row->Status;
                   $data['JReservasi'] = $row->JReservasi;
                   $num = 1;
                 }?>
+    
     <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
     <!--[if lt IE 9]>
       <script src="<?php echo base_url(); ?>js/html5shiv.js"></script>
@@ -74,18 +78,18 @@
               <li><a href="<?php echo base_url()?>index.php/sistem/pengaduan/<?php echo $data['NRP']?>">Pengaduan</a></li>
               <li><a href="<?php echo base_url()?>index.php/sistem/aboutus/<?php echo $data['NRP']?>">Tentang Kami</a></li>
             </ul>
-			<div class="nav-collapse collapse">
-			<ul class="nav pull-right">
-				<li>
-					<form class="form-search nav">
-						<div class=" navbar-search input-prepend">
-						<button type="submit" class="btn"><i class="icon-search"></i></button>
-						<input type="text" class="search-query span2" placeholder="Find User">
-						</div>
-					</form>
-				</li>
-				<li>
-					<div class="btn-group">
+      <div class="nav-collapse collapse">
+      <ul class="nav pull-right">
+        <li>
+          <form class="form-search nav">
+            <div class=" navbar-search input-prepend">
+            <button type="submit" class="btn"><i class="icon-search"></i></button>
+            <input type="text" class="search-query span2" placeholder="Find User">
+            </div>
+          </form>
+        </li>
+        <li>
+          <div class="btn-group">
             <a href="<?php echo base_url()?>index.php/profil/index/<?php echo $data['NRP']?>" class="btn btn-primary"><i class="icon-user icon-white"></i><?php echo $data['NamaUser']?></a>
             <a class="btn btn-primary dropdown-toggle" data-toggle="dropdown" href="#"><span class="caret"></span></a>
             <ul class="dropdown-menu">            
@@ -94,89 +98,72 @@
             <li><a href="<?php echo base_url()?>index.php/login" class="btn"><i class="icon-off"></i> Keluar </a></li>
           </ul>
           </div>
-				</li>
-			</div>
+        </li>
+      </div>
           </div><!--/.nav-collapse -->
         </div>
       </div>
     </div>
 
     <div class="container">
-		<div class="page-header">
-			<h1> <img src="<?php echo base_url(); ?>img/bookdes.png" class="img-rounded"> Detail Buku </h1>
-		</div>
-		
-		<div class="hero-unit">
-      <div class="row">
+    <div class="page-header">
+      <h1> <img src="<?php echo base_url(); ?>img/mybook.png" class="img-rounded"> Daftar Buku Saya </h1>
+    </div>
+    
+    <p class="text-right"><a class="btn btn-medium btn-primary" href="<?php echo base_url(); ?>index.php/buku/tambah/<?php echo $data['NRP']; ?>"><i class="icon-plus"></i>Tambah Buku</a></p>
+    
+    <div class="hero-unit">
+      <table class="table table-condensed table-hover">
+        <thead> 
+          <tr>
+          <th> No. </th>
+          <th> Judul Buku </th>
+          <th> Penulis </th>
+          <th> Kategori </th>
+          <th> Status </th>
+          <th> Jumlah </th>
+          <th> Opsi </th>
 
-      <table class="table">
-        <td>
-          <div class="col-md-4">
-            <img src="<?php echo base_url(); ?>img/hp.jpg" class="img-rounded">
-          </div>
-        </td>
-        <td>
-         <div class="col-md-8">
-        <table class="table table-striped">        
-        <tr>
-          <td>
-            Judul Buku
-          </td>
-          <td>
-            <?php echo $data['Nama_Buku'];  ?>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            Penulis
-          </td>
-          <td>
-            <?php echo $data['Penulis'];  ?>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            Penerbit
-          </td>
-          <td>
-            <?php echo $data['Penerbit'];  ?>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            Tahun Terbit
-          </td>
-          <td>
-            <?php echo $data['Tahun'];  ?>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            Deskripsi Singkat
-          </td>
-          <td>
-            <?php echo $data['Deskripsi'];  ?>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            Kategori
-          </td>
-          <td>
-            <?php echo $data['Kategori'];  ?> 
-          </td>
-        </tr>
+          </tr>
+        </thead>
+        <tbody>
+          <?php foreach ($Mahasiswa as $row) {
+                echo "<tr>";
+                echo "<td>";
+                echo $num;
+                echo "</td>";
+                echo "<td>";
+                echo $row->Nama_Buku;
+                $id = $row->Nama_Buku;
+                echo "</td>";
+                echo "<td>";
+                echo $row->Penulis;
+                echo "</td>";
+                echo "<td>";
+                echo $row->Kategori;
+                echo "</td>";
+                echo "<td>";
+                if ($row->Status == 1) echo "Dipinjamkan";
+                else echo "Dijual";
+                echo "</td>";
+                echo "<td>";
+                echo $row->JReservasi;
+                echo "</td>";
+                echo "<td> 
+                        <a class='btn btn-mini btn-primary' href='".base_url()."index.php/buku/editbuku/".$row->NRP."/".$row->ID_Buku."'></i>Edit</a> 
+                        <a class='btn btn-mini btn-primary' href='".base_url()."index.php/buku/detailbuku/".$row->NRP."/".$row->ID_Buku."'></i>Detail</a> 
+                      </td>";
+                echo "</tr>";
+                $num = $num + 1;
+                }?>
+
+        </tbody>
       </table>
-      </div>
-        <a href="<?php echo base_url(); ?>index.php/buku/edit" class="btn btn-primary">Edit Buku</a>
-            <a href="<?php echo base_url(); ?>index.php/buku/hapus" class="btn btn-primary">Hapus Buku</a> 
-        </td>
-      </table>
-		</div>
-		
-		<hr>
-		
-	  <footer>
+    </div>
+    
+    <hr>
+    
+      <footer>
         <p><h5>&copy; MPPL E03 2015</h5></p>
       </footer>
 

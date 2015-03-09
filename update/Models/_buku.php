@@ -15,6 +15,7 @@
 			$saksake = $this->db->query("SELECT * FROM `user` WHERE NRP = '$NRP'")->result();
 			return $saksake;
 		}
+
 		function insert($data)
 		{
 			$this->db->insert('buku',$data);
