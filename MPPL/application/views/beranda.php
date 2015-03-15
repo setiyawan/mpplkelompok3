@@ -114,8 +114,8 @@
 		<table class="table">
 		<thead>
 		<tr>
-			<td> <a href="<?php echo base_url();?>/index.php/search/klasifikasi/<?php echo $User[0]->NRP?>/kom"><img src="<?php echo base_url() ?>img/pc.png" class="img-rounded"></a> </td>
-			<td> <a href="<?php echo base_url();?>/index.php/search/klasifikasi/<?php echo $User[0]->NRP?>/ind"><img src="<?php echo base_url() ?>img/factory.png" class="img-rounded"></a> </td>
+			<td> <a href="<?php echo base_url();?>/index.php/search/klasifikasi/<?php echo $User[0]->NRP?>/kom"><img src="<?php echo base_url() ?>img/Komputer.png" class="img-rounded"></a> </td>
+			<td> <a href="<?php echo base_url();?>/index.php/search/klasifikasi/<?php echo $User[0]->NRP?>/ind"><img src="<?php echo base_url() ?>img/Industri.png" class="img-rounded"></a> </td>
 			<td> <a href="<?php echo base_url();?>/index.php/search/klasifikasi/<?php echo $User[0]->NRP?>/sci"><img src="<?php echo base_url() ?>img/science.png" class="img-rounded"></a> </td>		
 			<td> <a href="<?php echo base_url();?>/index.php/search/klasifikasi/<?php echo $User[0]->NRP?>/sip"><img src="<?php echo base_url() ?>img/sipil.png" class="img-rounded"></a> </td>
 			</tr>
@@ -128,10 +128,10 @@
 			<td> <a href="<?php echo base_url();?>/index.php/search/klasifikasi/<?php echo $User[0]->NRP?>/sip" class="text-info"> Sipil </td>
 			</tr>
 			<tr>
-			<td> <a href="<?php echo base_url();?>/index.php/search/klasifikasi/<?php echo $User[0]->NRP?>/kel"><img src="<?php echo base_url() ?>img/ship.png" class="img-rounded"></a> </td>
+			<td> <a href="<?php echo base_url();?>/index.php/search/klasifikasi/<?php echo $User[0]->NRP?>/kel"><img src="<?php echo base_url() ?>img/Kelautan.png" class="img-rounded"></a> </td>
 			<td> <a href="<?php echo base_url();?>/index.php/search/klasifikasi/<?php echo $User[0]->NRP?>/sen"><img src="<?php echo base_url() ?>img/seni.png" class="img-rounded"></a> </td>
-			<td> <a href="<?php echo base_url();?>/index.php/search/klasifikasi/<?php echo $User[0]->NRP?>/olr"><img src="<?php echo base_url() ?>img/football.png" class="img-rounded"></a> </td>		
-			<td> <a href="<?php echo base_url();?>/index.php/search/klasifikasi/<?php echo $User[0]->NRP?>/sej"><img src="<?php echo base_url() ?>img/historical.png" class="img-rounded"></a> </td>
+			<td> <a href="<?php echo base_url();?>/index.php/search/klasifikasi/<?php echo $User[0]->NRP?>/olr"><img src="<?php echo base_url() ?>img/Olahraga.png" class="img-rounded"></a> </td>		
+			<td> <a href="<?php echo base_url();?>/index.php/search/klasifikasi/<?php echo $User[0]->NRP?>/sej"><img src="<?php echo base_url() ?>img/Sejarah.png" class="img-rounded"></a> </td>
 			</tr>
 			<tr>
 			<td> <a href="<?php echo base_url();?>/index.php/search/klasifikasi/<?php echo $User[0]->NRP?>/kel" class="text-info"> Kelautan </td>
@@ -142,8 +142,8 @@
 			<tr>
 			<td> <a href="<?php echo base_url();?>/index.php/search/klasifikasi/<?php echo $User[0]->NRP?>/bis"><img src="<?php echo base_url() ?>img/bisnis.png" class="img-rounded"></a> </td>
 			<td> <a href="<?php echo base_url();?>/index.php/search/klasifikasi/<?php echo $User[0]->NRP?>/bio"><img src="<?php echo base_url() ?>img/biografi.png" class="img-rounded"></a> </td>
-			<td> <a href="<?php echo base_url();?>/index.php/search/klasifikasi/<?php echo $User[0]->NRP?>/hib"><img src="<?php echo base_url() ?>img/komik.png" class="img-rounded"></a> </td>		
-			<td> <a href="<?php echo base_url();?>/index.php/search/klasifikasi/<?php echo $User[0]->NRP?>/lai"><img src="<?php echo base_url() ?>img/other.png" class="img-rounded"></a> </td>
+			<td> <a href="<?php echo base_url();?>/index.php/search/klasifikasi/<?php echo $User[0]->NRP?>/hib"><img src="<?php echo base_url() ?>img/Hiburan.png" class="img-rounded"></a> </td>		
+			<td> <a href="<?php echo base_url();?>/index.php/search/klasifikasi/<?php echo $User[0]->NRP?>/lai"><img src="<?php echo base_url() ?>img/Lain-lain.png" class="img-rounded"></a> </td>
 			</tr>
 			<tr>
 			<td> <a href="<?php echo base_url();?>/index.php/search/klasifikasi/<?php echo $User[0]->NRP?>/bis" class="text-info"> Bisnis </td>

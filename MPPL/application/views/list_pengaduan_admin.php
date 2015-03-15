@@ -19,6 +19,10 @@
 		max-width: 1000px;
 	  }
 	  
+	  .input-small{
+		width: 222px;
+	  }
+	  
     </style>
     <link href="<?php echo base_url()?>/css/bootstrap-responsive.css" rel="stylesheet">
 
@@ -37,7 +41,7 @@
 
   <body>
 
-    <div class="navbar navbar-fixed-top">
+   <div class="navbar navbar-fixed-top">
       <div class="navbar-inner">
         <div class="container">
           <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
@@ -48,11 +52,10 @@
           <a href="beranda.html" class="brand"><img style="max-width:20px; max-height:20px;" src="<?php echo base_url()?>/img/read.png" class="img-rounded"></a>
           <div class="nav-collapse collapse">
             <ul class="nav">
-              <li><a href="<?php echo base_url()?>index.php/search/beranda/<?php echo $User[0]->NRP?>">Beranda</a></li>
-              <li><a href="bukusaya.html">Buku Saya</a></li>
-              <li><a href="profile.html">Profil</a></li>
-			  <li><a href="pengaduan.html">Pengaduan</a></li>
-			  <li><a href="aboutus.html">Tentang Kami</a></li>
+              <li><a href="beranda_admin.html">Beranda</a></li>
+			  <li><a href="user_admin.html">User</a></li>
+			  <li class="active"><a href="list_pengaduan.html">List Pengaduan</a></li>
+			  <li><a href="aboutus_admin.html">Tentang Kami</a></li>
             </ul>
 			<div class="nav-collapse collapse">
 			<ul class="nav pull-right">
@@ -66,11 +69,10 @@
 				</li>
 				<li>
 					<div class="btn-group">
-					<a href="profile.html" class="btn btn-primary"><i class="icon-user icon-white"></i><?php echo $User[0]->NamaUser ?> </a>
+					<a href="profile.html" class="btn btn-primary"><i class="icon-user icon-white"></i> &nbsp Admin</a>
 					<a class="btn btn-primary dropdown-toggle" data-toggle="dropdown" href="#"><span class="caret"></span></a>
 					<ul class="dropdown-menu">
-						<li><a href="editprofile.html"><i class="icon-pencil"></i> Edit profile </a></li>
-            <li><a href="gantipass_user.html"><i class="icon-pencil"></i> Ganti Kata Sandi </a></li>
+						<li><a href="gantipass_admin.html.html"><i class="icon-pencil"></i> Ganti Kata Sandi </a></li>
 						<li><a href="signin.html"><i class="icon-off"></i> Keluar </a></li>
 					</ul>
 					</div>
@@ -83,70 +85,47 @@
 
     <div class="container">
 		<div class="page-header">
-			<h1> <img src="<?php echo base_url()?>/img/bookdes.png" class="img-rounded"> Detail Buku </h1>
+			<h1> <img src="<?php echo base_url()?>/img/myprofil.png" class="img-rounded"> List Pengaduan </h1>
 		</div>
 		
+		<form class="form-inline text-right">
+			<input type="text" class="input-small" placeholder="Cari Pengirim">
+			<a href="search_result_admin.html" type="submit" class="btn"><i class="icon-search"></i></a>
+		</form>
+		
 		<div class="hero-unit">
-      <div class="row">
-      <div class="col-md-4">
-        <img src="<?php echo base_url();?>image/<?php echo $Detail[0]->Gambar_Buku?>.jpg" class="img-circle">
-      </div>
-      <div class="col-md-8">
-        <table class="table">        
-        <tr>
-          <td>
-            Judul Buku
-          </td>
-          <td>
-            <?php echo $Detail[0]->Nama_Buku;?>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            Penulis
-          </td>
-          <td>
-			<?php echo $Detail[0]->Penulis;?>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            Penerbit
-          </td>
-          <td>
-            Bloomsbury
-          </td>
-        </tr>
-        <tr>
-          <td>
-            Tahun Terbit
-          </td>
-          <td>
-            <?php echo $Detail[0]->Tahun;?>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            Deskripsi Singkat
-          </td>
-          <td>
-            <?php echo $Detail[0]->Deskripsi;?>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            Kategori
-          </td>
-          <td>
-            <?php if($Detail[0]->Kategori=="kom")
-					echo "Komputer";
-			?>
-          </td>
-        </tr>
-      </table>
-      </div>
-    </div>
-    </div>
+			
+			<table class="table table-condensed table-hover table-striped">
+				<thead>
+					<tr>
+					<th> No. </th>
+					<th> Pengirim </th>
+					<th> Pesan </th>
+					</tr>
+				</thead>
+				<tbody>
+				<?php $no=0;
+				foreach ($pengaduan as $row) {
+          				$no=$no+1;
+						echo "<tr> <td> $no";
+						echo "</td>	<td>";
+						echo $nama[$no-1]->NamaUser;
+						echo "</td>	<td> $row->Isi_Pengaduan" ;
+						echo "</td> <td> <a class='btn btn-mini btn-primary pull-right' href='";
+						echo base_url();
+						echo "index.php/search/profilbuku/";
+						echo $User[0]->NRP;
+						echo "/";
+						echo $row->ID_Buku;
+						echo "'> </i>Detail</a> </td> </tr>";
+          			}
+				if($no==0)
+					echo "<tr> <td>Tidak ada pengaduan</td></tr>"
+				?>
+				</tbody>
+			</table>
+		</div>
+		</div>
 		
 		<hr>
 		

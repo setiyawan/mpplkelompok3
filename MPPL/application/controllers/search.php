@@ -20,6 +20,7 @@ class search extends CI_Controller {
 		$data['User'] = $this->profile->getAll($NRP);
 		$this->load->model('buku');
 		$data['Buku']=$this->buku->getAll($kategori);
+		$data['Kat']=$kategori;
 		$this->load->view('klasifikasi',$data);
 	}
 	public function beranda($NRP)

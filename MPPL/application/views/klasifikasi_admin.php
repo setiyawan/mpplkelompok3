@@ -56,11 +56,10 @@
           <a href="beranda.html" class="brand"><img style="max-width:20px; max-height:20px;" src="<?php echo base_url();?>/img/read.png" class="img-rounded"></a>
           <div class="nav-collapse collapse">
             <ul class="nav">
-              <li><a href="<?php echo base_url()?>index.php/search/beranda/<?php echo $User[0]->NRP?>">Beranda</a></li>
-              <li><a href="bukusaya.html">Buku Saya</a></li>
-              <li><a href="profile.html">Profil</a></li>
-			  <li><a href="<?php echo base_url()?>index.php/pengaduan/index/<?php echo $User[0]->NRP?>">Pengaduan</a></li>
-			  <li><a href="<?php echo base_url()?>index.php/about/index/<?php echo $User[0]->NRP?>">Tentang Kami</a></li>
+              <li class="active"><a href="beranda_admin.html">Beranda</a></li>
+			  <li><a href="user_admin.html">User</a></li>
+			  <li><a href="list_pengaduan.html">List Pengaduan</a></li>
+			  <li><a href="aboutus_admin.html">Tentang Kami</a></li>
             </ul>
 			<div class="nav-collapse collapse">
 			<ul class="nav pull-right">
@@ -74,12 +73,11 @@
 				</li>
 				<li>
 					<div class="btn-group">
-					<a href="profile.html" class="btn btn-primary"><i class="icon-user icon-white"></i><?php echo $User[0]->NamaUser?></a>
+					<a href="profile.html" class="btn btn-primary"><i class="icon-user icon-white"></i> &nbsp Admin</a>
 					<a class="btn btn-primary dropdown-toggle" data-toggle="dropdown" href="#"><span class="caret"></span></a>
 					<ul class="dropdown-menu">
-						<li><a href="editprofile.html"><i class="icon-pencil"></i> Ubah Profil </a></li>
-						<li><a href="editprofile.html"><i class="icon-pencil"></i> Ganti Kata Sandi </a></li>
-						<li><a href="<?php echo base_url() ?>index.php/login/index"><i class="icon-off"></i> Keluar </a></li>
+						<li><a href="gantipass_admin.html"><i class="icon-pencil"></i> Ganti Kata Sandi </a></li>
+						<li><a href="signin.html"><i class="icon-off"></i> Keluar </a></li>
 					</ul>
 					</div>
 				</li>
@@ -91,47 +89,15 @@
 
     <div class="container">
 		<div class="page-header">
-			<h1> 
-			<?php
-			$s="";
-			if($Kat=="ind")
-				$s="Industri";
-			else if($Kat=="kom")
-				$s="Komputer";
-			else if($Kat=="sci")
-				$s="Science";
-			else if($Kat=="sip")
-				$s="Sipil";
-			else if($Kat=="kel")
-				$s="Kelautan";
-			else if($Kat=="sen")
-				$s="Seni";
-			else if($Kat=="olr")
-				$s="Olahraga";
-			else if($Kat=="sej")
-				$s="Sejarah";
-			else if($Kat=="bis")
-				$s="Bisnis";
-			else if($Kat=="bio")
-				$s="Biografi";
-			else if($Kat=="hib")
-				$s="Hiburan";
-			else if($Kat=="lai")
-				$s="Lain-lain";
-			?>
-			<img src="<?php echo base_url();?>/img/<?php echo $s;?>.png" class="img-rounded"> 
-			<?php
-			echo $s;
-			?>
-			</h1>
+			<h1> <img src="<?php echo base_url();?>/img/pc.png" class="img-rounded"> Komputer </h1>
 		</div>
 		
 		<h5 class="text text-succes"> Cari buku berdasarkan: </h5>
-		<form class="form-inline text-right" action="<?php echo base_url("index.php/search/cari"); echo "/";echo $User[0]->NRP?>" method="POST">
-			<input id="judul" name="judul" type="text" class="input-small" placeholder="Judul">
-			<input id="tahun" name="tahun" type="text" class="input-small" placeholder="Tahun">				
+		<form class="form-inline text-right">
+			<input type="text" class="input-small" placeholder="Judul">
+			<input type="text" class="input-small" placeholder="Tahun">				
 			<input type="text" class="input-small" placeholder="Penerbit">
-			<input id="pengarang" name="pengarang" type="text" class="input-small" placeholder="Pengarang">
+			<input type="text" class="input-small" placeholder="Pengarang">
 			<button type="submit" class="btn"><i class="icon-search"></i></button>
 		</form>
 			
@@ -145,23 +111,36 @@
 					</tr>
 				</thead>
 				<tbody>
-				<?php $no=0;
-				foreach ($Buku as $row) {
-          				$no=$no+1;
-						echo "<tr> <td> $no";
-						echo "</td>	<td> $row->Nama_Buku"; 
-						echo "</td>	<td> $row->Penulis" ;
-						echo "</td> <td> <a class='btn btn-mini btn-primary pull-right' href='";
-						echo base_url();
-						echo "index.php/search/profilbuku/";
-						echo $User[0]->NRP;
-						echo "/";
-						echo $row->ID_Buku;
-						echo "'> </i>Detail</a> </td> </tr>";
-          			}
-				if($no==0)
-					echo "<tr> <td>Tidak ada buku yang ditemukan </td></tr>"
-				?>
+					<tr>
+					<td> 1 </td>
+					<td> Linear Algebra II </td>
+					<td> Albert Einstein </td>
+					<td> <a class="btn btn-mini btn-primary pull-right" href="profilbuku_admin.html"></i>Detail</a> </td>
+					</tr>
+					<tr>
+					<td> 2 </td>
+					<td> Kalkulus 1 </td>
+					<td> Purnomo </td>
+					<td> <a class="btn btn-mini btn-primary pull-right" href="profilbuku_admin.html"></i>Detail</a> </td>
+					</tr>
+					<tr>
+					<td> 3 </td>
+					<td> Kalkulus 2 </td>
+					<td> Paijo </td>
+					<td> <a class="btn btn-mini btn-primary pull-right" href="profilbuku_admin.html"></i>Detail</a> </td>
+					</tr>
+					<tr>
+					<td> 4 </td>
+					<td> Kalkulus 3 </td>
+					<td> Purnomo </td>
+					<td> <a class="btn btn-mini btn-primary pull-right" href="profilbuku_admin.html"></i>Detail</a> </td>
+					</tr>
+					<tr>
+					<td> 5 </td>
+					<td> Kalkulus 4 </td>
+					<td> Paijo </td>
+					<td> <a class="btn btn-mini btn-primary pull-right" href="profilbuku_admin.html"></i>Detail</a> </td>
+					</tr>
 				</tbody>
 			</table>
 		</div>
